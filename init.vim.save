@@ -1,0 +1,24 @@
+VuddX0;5u0;5uu:quu0;5u
+u0;5u0;5u0;5u032u95;5u95;5u032uXX0;5u0;5u0;5uasdsdasdas0;5u0;5u0;5u0;5u0;5u0;5u0;6u0;6u9;5uet mouse=a
+set encoding=utf-8
+set number
+set noswapfile
+set scrolloff=7
+
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set autoindent
+set fileformat=unix
+inoremap jk <esc>
+
+call plug#begin()
+
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'L3MON4D3/LuaSnip'
+
+call plug#end()
