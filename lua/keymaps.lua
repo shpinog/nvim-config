@@ -7,10 +7,13 @@ local default_opts = {noremap = true, silent = true}
 map('v', 'Y', '"+y', default_opts)
 
 --Снять выделение после поиска
+--completion
+-- map('i', '<Tab>',   [[pumvisible() ? "\<C-n>" : "\<Tab>"]],   { noremap = true, expr = true })
+-- map('i', '<S-Tab>', [[pumvisible() ? "\<C-p>" : "\<S-Tab>"]], { noremap = true, expr = true })
 
 
 -- bufferline
-map('n', '<Tab>', ':BufferLineCycleNext<CR>', default_opts)
+-- map('n', '<Tab>', ':BufferLineCycleNext<CR>', default_opts)
 map('n', '<S-Tab>', ':BufferLineCyclePrev<CR>', default_opts)
 map('n', '<C-t><C-n>', ':tabnew<CR>', default_opts) --Tab new
 map('n', '<C-t><C-k>', ':bd<CR>', default_opts) --Buffer close

@@ -16,8 +16,8 @@ opt.imsearch=0
 
 
 opt.termguicolors = true      --  24-bit RGB colors
-vim.cmd 'colorscheme material'
-vim.g.material_style = "darker"
+vim.cmd ('colorscheme material')
+vim.g.material_style = "oceanic"
 
 
 cmd([[
@@ -38,10 +38,10 @@ opt.tabstop = 4           -- 1 tab == 4 spaces
 --
 
 ---lsp
-local lsp_installer = require("nvim-lsp-installer")
-
-lsp_installer.on_server_ready(function(server)
-    local opts = {}
-
-    server:setup(opts)
-end)
+-- local lsp_installer = require("nvim-lsp-installer")
+--
+-- lsp_installer.on_server_ready(function(server)
+--     local opts = {}
+--
+--     server:setup(opts)
+-- end)
