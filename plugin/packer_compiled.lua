@@ -97,6 +97,16 @@ _G.packer_plugins = {
     path = "/home/shpinog/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
   },
+  ["cmp-nvim-lsp"] = {
+    loaded = true,
+    path = "/home/shpinog/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  cmp_luasnip = {
+    loaded = true,
+    path = "/home/shpinog/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
   ["emmet-vim"] = {
     loaded = true,
     path = "/home/shpinog/.local/share/nvim/site/pack/packer/start/emmet-vim",
@@ -118,7 +128,7 @@ _G.packer_plugins = {
     url = "https://github.com/lewis6991/impatient.nvim"
   },
   ["indent-blankline.nvim"] = {
-    config = { "\27LJ\2\nw\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\2\25show_current_context\2\31show_current_context_start\2\nsetup\21indent_blankline\frequire\0" },
+    config = { "\27LJ\2\nw\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\2\31show_current_context_start\2\25show_current_context\2\nsetup\21indent_blankline\frequire\0" },
     loaded = true,
     path = "/home/shpinog/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
@@ -147,6 +157,22 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/shpinog/.local/share/nvim/site/pack/packer/start/mkdir.nvim",
     url = "https://github.com/jghauser/mkdir.nvim"
+  },
+  ["neoscroll.nvim"] = {
+    config = { "\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14neoscroll\frequire\0" },
+    loaded = true,
+    path = "/home/shpinog/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
+    url = "https://github.com/karb94/neoscroll.nvim"
+  },
+  ["nvim-cmp"] = {
+    loaded = true,
+    path = "/home/shpinog/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-gomove"] = {
+    loaded = true,
+    path = "/home/shpinog/.local/share/nvim/site/pack/packer/start/nvim-gomove",
+    url = "https://github.com/booperlv/nvim-gomove"
   },
   ["nvim-lsp-installer"] = {
     loaded = true,
@@ -213,30 +239,44 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/shpinog/.local/share/nvim/site/pack/packer/start/vim-startuptime",
     url = "https://github.com/dstein64/vim-startuptime"
+  },
+  ["vim-vsnip"] = {
+    loaded = true,
+    path = "/home/shpinog/.local/share/nvim/site/pack/packer/start/vim-vsnip",
+    url = "https://github.com/hrsh7th/vim-vsnip"
+  },
+  ["vim-vsnip-integ"] = {
+    loaded = true,
+    path = "/home/shpinog/.local/share/nvim/site/pack/packer/start/vim-vsnip-integ",
+    url = "https://github.com/hrsh7th/vim-vsnip-integ"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: indent-blankline.nvim
-time([[Config for indent-blankline.nvim]], true)
-try_loadstring("\27LJ\2\nw\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\2\25show_current_context\2\31show_current_context_start\2\nsetup\21indent_blankline\frequire\0", "config", "indent-blankline.nvim")
-time([[Config for indent-blankline.nvim]], false)
--- Config for: better-escape.nvim
-time([[Config for better-escape.nvim]], true)
-try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18better_escape\frequire\0", "config", "better-escape.nvim")
-time([[Config for better-escape.nvim]], false)
--- Config for: Comment.nvim
-time([[Config for Comment.nvim]], true)
-try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
-time([[Config for Comment.nvim]], false)
 -- Config for: telescope.nvim
 time([[Config for telescope.nvim]], true)
 try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14telescope\frequire\0", "config", "telescope.nvim")
 time([[Config for telescope.nvim]], false)
+-- Config for: neoscroll.nvim
+time([[Config for neoscroll.nvim]], true)
+try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14neoscroll\frequire\0", "config", "neoscroll.nvim")
+time([[Config for neoscroll.nvim]], false)
+-- Config for: Comment.nvim
+time([[Config for Comment.nvim]], true)
+try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
+time([[Config for Comment.nvim]], false)
 -- Config for: alpha-nvim
 time([[Config for alpha-nvim]], true)
 try_loadstring("\27LJ\2\n`\0\0\5\0\5\0\n6\0\0\0'\2\1\0B\0\2\0029\0\2\0006\2\0\0'\4\3\0B\2\2\0029\2\4\2B\0\2\1K\0\1\0\vconfig\26alpha.themes.startify\nsetup\nalpha\frequire\0", "config", "alpha-nvim")
 time([[Config for alpha-nvim]], false)
+-- Config for: better-escape.nvim
+time([[Config for better-escape.nvim]], true)
+try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18better_escape\frequire\0", "config", "better-escape.nvim")
+time([[Config for better-escape.nvim]], false)
+-- Config for: indent-blankline.nvim
+time([[Config for indent-blankline.nvim]], true)
+try_loadstring("\27LJ\2\nw\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\2\31show_current_context_start\2\25show_current_context\2\nsetup\21indent_blankline\frequire\0", "config", "indent-blankline.nvim")
+time([[Config for indent-blankline.nvim]], false)
 if should_profile then save_profiles() end
 
 end)

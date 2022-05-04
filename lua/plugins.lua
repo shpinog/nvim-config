@@ -28,11 +28,13 @@ return require('packer').startup(function(use)
     'nvim-lualine/lualine.nvim',
     'marko-cerovac/material.nvim', -- Theme material
     'adelarsq/vim-devicons-emoji',
+    'ryanoasis/vim-devicons',
     'rcarriga/nvim-notify',
     'jghauser/mkdir.nvim',
     'lewis6991/impatient.nvim', -- speed boost
     "nathom/filetype.nvim", --speed boost
     'dstein64/vim-startuptime',
+    'booperlv/nvim-gomove',
 
 
 
@@ -41,7 +43,12 @@ return require('packer').startup(function(use)
 require('impatient')
 
 
+use {
+  'karb94/neoscroll.nvim',
+  config = function() require('neoscroll').setup() end
+}
 
+--Mini Framework
 use { 'echasnovski/mini.nvim' }
 
 use {
@@ -63,6 +70,7 @@ use {
         "neovim/nvim-lspconfig",
     }
 }
+
 
 -- Better escape
 use {

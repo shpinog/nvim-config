@@ -8,6 +8,7 @@ opt.number = true                   -- Включаем нумерацию ст�
 opt.undofile = true                 -- Возможность отката назад
 opt.mouse = 'a'
 opt.encoding= 'utf-8'
+opt.guifont = {"DroidSansMono Nerd Font", "11" }
 opt.swapfile = false
 opt.scrolloff=7
 opt.keymap="russian-jcukenwin"
@@ -16,8 +17,9 @@ opt.imsearch=0
 
 
 opt.termguicolors = true      --  24-bit RGB colors
-vim.cmd ('colorscheme material')
+
 vim.g.material_style = "oceanic"
+vim.cmd[[colorscheme material]]
 
 
 cmd([[
