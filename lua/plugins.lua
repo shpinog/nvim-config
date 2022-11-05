@@ -9,16 +9,12 @@ return require('packer').startup(function(use)
 
 
 
+
+
   use {
 
     'wbthomason/packer.nvim',
     'LnL7/vim-nix',
-    'hrsh7th/nvim-cmp',
-    'hrsh7th/vim-vsnip',
-    'hrsh7th/vim-vsnip-integ',
-    'hrsh7th/cmp-nvim-lsp',
-    'saadparwaiz1/cmp_luasnip',
-    'L3MON4D3/LuaSnip',
     'kyazdani42/nvim-web-devicons',
     'akinsho/bufferline.nvim', tag = "*",
     'majutsushi/tagbar',
@@ -35,18 +31,27 @@ return require('packer').startup(function(use)
     "nathom/filetype.nvim", --speed boost
     'dstein64/vim-startuptime',
     'booperlv/nvim-gomove',
-
+    "b0o/mapx.nvim",
+    "lukas-reineke/cmp-rg",
+    "williamboman/mason.nvim",
+    "ms-jpq/coq_nvim",
+    "ms-jpq/coq.artifacts"
 
 
   }
 
 require('impatient')
 
+-- use {'neoclide/coc.nvim', branch = 'release'}
 
 use {
   'karb94/neoscroll.nvim',
   config = function() require('neoscroll').setup() end
 }
+
+--complementree
+use {'https://git.sr.ht/~vigoux/complementree.nvim', requires = {'L3MON4D3/LuaSnip', 'nvim-treesitter/nvim-treesitter'} }
+
 
 --Mini Framework
 use { 'echasnovski/mini.nvim' }
@@ -64,12 +69,12 @@ use {
 
 --SLP Installer
 
-use {
-    "williamboman/nvim-lsp-installer",
-    {
-        "neovim/nvim-lspconfig",
-    }
-}
+-- use {
+--     "williamboman/nvim-lsp-installer",
+--     {
+--         "neovim/nvim-lspconfig",
+--     }
+-- }
 
 
 -- Better escape
@@ -140,7 +145,6 @@ require("bufferline").setup{}
 require'hop'.setup()
 require('lualine').setup()
 require("notify").setup()
--- require('mini.completion').setup({})
 vim.notify = require("notify")
 
 

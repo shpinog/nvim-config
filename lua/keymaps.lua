@@ -1,10 +1,12 @@
 local map = vim.api.nvim_set_keymap
 
-
 local default_opts = {noremap = true, silent = true}
 
 map('v', 'Y', '"+y', default_opts)
 --Снять выделение после поиска
+
+
+
 --NeoScroll
 local t = {}
 -- Syntax: t[keys] = {function, {function arguments}}
@@ -12,7 +14,9 @@ t['<C-w>'] = {'scroll', {'-0.10', 'false', '100'}}
 t['<C-e>'] = {'scroll', { '0.10', 'false', '100'}}
 
 require('neoscroll.config').set_mappings(t)
---completion
+
+--completion COC
+
 
 
 --nvim-gomove
@@ -50,6 +54,7 @@ map('n', '<F6>', ':NvimTreeRefresh<CR>:NvimTreeFindFileToggle<CR>', default_opts
 
 --telescope
 map('n', '<C-f><C-f>', [[ <cmd>lua require('telescope.builtin').find_files()<cr>]], default_opts)
+map('n', '<C-f><C-e>', [[ <cmd>lua require('telescope.builtin').oldfiles()<cr>]], default_opts)
 map('n', '<C-f><C-b>', [[ <cmd>lua require('telescope.builtin').buffers()<cr>]], default_opts)
 -- <F4> Поиск слова под курсором
 map('n', '<C-f><C-w>', [[<cmd>lua require('telescope.builtin').grep_string()<cr>]], default_opts)
@@ -61,7 +66,11 @@ vim.api.nvim_set_keymap('', '<C-/>', "<cmd>lua require'hop'.hint_char1()<cr>", {
 
 -- Set layout En when leave InsertMode
 --
-vim.api.nvim_create_autocmd({'CmdlineEnter', 'VimEnter'}, {
+vim.api.nvim_create_autocmd({'InsertLeave', 'VimEnter'}, {
   callback = function() os.execute("swaymsg input '*' xkb_switch_layout 0") end,
 })
 
+require'mapx'.setup{ global = "skip" }
+
+nmap("H", "b")
+nmap("L", "e")

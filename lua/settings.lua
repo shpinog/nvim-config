@@ -8,8 +8,9 @@ opt.number = true                   -- Включаем нумерацию ст�
 opt.undofile = true                 -- Возможность отката назад
 opt.mouse = 'a'
 opt.encoding= 'utf-8'
-opt.guifont = {"DroidSansMono Nerd Font", "11" }
+opt.guifont = {"iosevka", "11" }
 opt.swapfile = false
+opt.autochdir = true
 opt.scrolloff=7
 opt.keymap="russian-jcukenwin"
 opt.iminsert=0
@@ -35,15 +36,4 @@ opt.smarttab = true
 opt.shiftwidth = 4        -- shift 4 spaces when tab
 opt.tabstop = 4           -- 1 tab == 4 spaces
 
---
 
---
-
----lsp
--- local lsp_installer = require("nvim-lsp-installer")
---
--- lsp_installer.on_server_ready(function(server)
---     local opts = {}
---
---     server:setup(opts)
--- end)

@@ -16,15 +16,14 @@
       -- documentation = cmp.config.window.bordered(),
     },
     mapping = cmp.mapping.preset.insert({
-      ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-      ['<C-f>'] = cmp.mapping.scroll_docs(4),
       ['<S-TAB>'] = cmp.mapping.select_prev_item(),
       ['<TAB>'] = cmp.mapping.select_next_item(),
-      ['<C-e>'] = cmp.mapping.abort(),
       ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     }),
     sources = cmp.config.sources({
       { name = 'nvim_lsp' },
+      { name = 'rnix' },
+     -- { name = 'rg' },
       { name = 'vsnip' }, -- For vsnip users.
       -- { name = 'luasnip' }, -- For luasnip users.
       -- { name = 'ultisnips' }, -- For ultisnips users.
@@ -61,6 +60,27 @@
     })
   })
 
+
+  require'cmp'.setup {
+  sources = {
+    { name = 'path' }
+   }
+  }
+
+
+  local lspkind = require('lspkind')
+  cmp.setup {
+    formatting = {
+      format = lspkind.cmp_format({
+        mode = 'symbol_text', -- show only symbol annotations
+        maxwidth = 50, -- prevent the popup from showing more than provided characters
+
+        before = function (entry, vim_item)
+          return vim_item
+        end
+      })
+    }
+  }
   -- -- Setup lspconfig.
   -- local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
   -- -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
