@@ -42,7 +42,7 @@ return require('packer').startup(function(use)
 
 require('impatient')
 
--- use {'neoclide/coc.nvim', branch = 'release'}
+ use {'neoclide/coc.nvim', branch = 'release'}
 
 use {
   'karb94/neoscroll.nvim',
