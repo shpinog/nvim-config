@@ -35,14 +35,23 @@ return require('packer').startup(function(use)
     "lukas-reineke/cmp-rg",
     "williamboman/mason.nvim",
     "ms-jpq/coq_nvim",
-    "ms-jpq/coq.artifacts"
+    "ms-jpq/coq.artifacts",
+    'sheerun/vim-polyglot',
+    'gbprod/yanky.nvim'
 
 
   }
 
 require('impatient')
 
- use {'neoclide/coc.nvim', branch = 'release'}
+--Yanky
+
+require("yanky").setup({})
+
+
+--coc
+
+use {'neoclide/coc.nvim', branch = 'release'}
 
 use {
   'karb94/neoscroll.nvim',

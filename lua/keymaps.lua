@@ -74,3 +74,28 @@ require'mapx'.setup{ global = "skip" }
 
 nmap("H", "b")
 nmap("L", "e")
+
+--yanky.nvim
+vim.keymap.set({"n","x"}, "p", "<Plug>(YankyPutAfter)")
+vim.keymap.set({"n","x"}, "P", "<Plug>(YankyPutBefore)")
+vim.keymap.set({"n","x"}, "gp", "<Plug>(YankyGPutAfter)")
+vim.keymap.set({"n","x"}, "gP", "<Plug>(YankyGPutBefore)")
+vim.keymap.set({"n","x"}, "y", "<Plug>(YankyYank)")
+
+map('n', '<C-p>', [[ <cmd>lua require("telescope").extensions.yank_history.yank_history()<CR>]], default_opts)
+
+
+require("telescope").load_extension("yank_history")
+
+local utils = require("yanky.utils")
+local mapping = require("yanky.telescope.mapping")
+
+require("yanky").setup({
+   highlight = {
+    on_put = true,
+    on_yank = true,
+    timer = 100,
+  },
+})
+
+
